@@ -4,7 +4,7 @@ CPPFLAGS = -MMD
 CC = gcc
 CFLAGS = -Wall -Wextra -std=c99 -O2
 LDFLAGS = 
-LDLIBS = 
+LDLIBS = -lm
 
 SRC = main.c function.c
 
