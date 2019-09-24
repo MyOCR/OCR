@@ -12,14 +12,17 @@ OBJ = ${SRC:.c=.o}
 
 DEP = ${SRC:.c=.d}
 
+all: main
+
 main: ${OBJ}
 
--include ${DEP}
+.PHONY: clean
 
 clean:
 	${RM} ${OBJ}
 	${RM} ${DEP}
 	${RM} main
 
+-include ${DEP}
 
 # END
