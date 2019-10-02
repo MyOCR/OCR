@@ -6,7 +6,7 @@ CFLAGS = -Wall -Wextra -std=c99 -O2 $(shell sdl2-config --cflags)
 LDFLAGS = -export-dynamic $(shell sdl2-config --libs)
 LDLIBS = -lm
 
-SRC = main.c function.c
+SRC = main.c net.c matrix.c fileopening.c
 
 OBJ = ${SRC:.c=.o}
 
