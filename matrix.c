@@ -58,6 +58,41 @@ return m1+m2
 	return m;
 }
 
+matrix *subMat(matrix *m1, matrix *m2)
+{/*
+return m1-m2
+/!\ it creates a third matrix 
+*/
+	if(m1->height != m2->height || m1->width != m2->width)
+		errx(1, "Error in subMat. The matrix m1 and m2 have different width or different height");
+
+	matrix *m = newMat(m1->height, m1->width);
+
+	for(size_t i = 0; i < m->height*m->width; i++)
+		m->mat[i] = m1->mat[i] - m2->mat[i];
+
+	return m;
+}
+
+void prodMat(matrix *m, double n)
+{//return n*m
+	for(size_t i = 0; i < m->height*m->width; i++)
+		m->mat[i] = m->mat[i]*n;
+}
+
+matrix *copyMat(matrix *m)
+{/*
+return a copy of m
+/!\ it creates a second matrix 
+*/
+	matrix *mCopy = newMat(m->height, m->width);
+
+	for(size_t i = 0; i < m->height*m->width; i++)
+		mCopy->mat[i] = m->mat[i];
+
+	return mCopy;
+}
+
 matrix *dotMat(matrix *m1, matrix *m2)
 {/*
 return m1.m2
