@@ -7,6 +7,6 @@ typedef struct
 {
 	matrix layer[];
 	matrix biases[];
-}
+}network;
 
 #endif //NET_H
