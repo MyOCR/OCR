@@ -1,8 +1,12 @@
 #include <stdio.h>
+#include "SDL2/SDL_image.h"
 #include "matrix.h"
+#include "fileopening.h"
 
 int main(int argc, char** argv)
 {
+	SDL_Surface* image = IMG_Load(argv[0]);
+
 	matrix *m1 = newMat(2,3), *m2 = newMat(2,3), *m3 = NULL, *m4 = NULL;
 	
 	initMat(m1, 1);
