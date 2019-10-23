@@ -5,3 +5,5 @@ CNN is untested yet
 
 To test you will need:
 numpy, tensorflow (to import mnist dataset), matplotlib (to display loss/accuracy... curves)
+
+Do not forget to put the mnist folder in the same path as the script (or edit script with correct path)
